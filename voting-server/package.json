@@ -18,6 +18,11 @@
     "mocha": "^3.0.2"
   },
   "babel": {
-    "presets": ["es2105"]
+    "presets": [
+      "es2105"
+    ]
+  },
+  "dependencies": {
+    "immutable": "^3.8.1"
   }
 }
