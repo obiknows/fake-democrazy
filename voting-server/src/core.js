@@ -1,22 +1,24 @@
-/* src/core.js */
-function getWinners(vote) {
-  // if not vote, return a blank array
-  if(!vote) return [];
-  // else, get the pair of votes
-  const [a,b] = vote.get('pair');
-  const aVotes =  vote.getIn(['tally', a], 0);
-  const bVotes =  vote.getIn(['tally', b], 0);
-  // calculate the higher of the 2 and return that
-  if      (aVotes > bVotes) return [a];
-  else if (aVotes < bVotes) return [b];
-  else                      return [a,b];
+import {List, Map} from 'immutable';
+
+// setup the entries in the state tree
+export function setEntries(state, entries) {
+  return state.set('entries', List(entries));
 }
 
+// add the next function for state transitions
 export function next(state) {
-  const entries = state.get('entries')
-                       .concat(getWinners(state.get('vote')));
+  const entries = state.get('entries');
   return state.merge({
     vote: Map({pair: entries.take(2)}),
     entries: entries.skip(2)
   });
+}
+
+// add function to allow for voting
+export function vote(state, entry) {
+  return state.updateIn(
+    ['vote', 'tally', entry],
+    0,
+    tally => tally + 1
+  );
 }
