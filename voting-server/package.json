@@ -25,7 +25,7 @@
   },
   "babel": {
     "presets": [
-      "es2105"
+      "es2015"
     ]
   },
   "dependencies": {
