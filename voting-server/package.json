@@ -1,9 +1,14 @@
 {
   "name": "voting-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "watch me get bomb AF w/ Redux",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/samnnodim/fake-democrazy.git"
+  },
   "main": "index.js",
   "scripts": {
+    "start": "babel-node index.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive",
     "test:watch": "npm run test --watch"
   },
