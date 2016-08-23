@@ -16,9 +16,10 @@ export function next(state) {
 
 // add function to allow for voting
 export function vote(state, entry) {
+  // use updateIn() which applies the function to the array
   return state.updateIn(
-    ['vote', 'tally', entry],
-    0,
-    tally => tally + 1
+    ['vote', 'tally', entry], // keyPath
+    0,                        // notSetValue
+    tally => tally + 1        // updater
   );
 }
