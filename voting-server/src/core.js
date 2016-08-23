@@ -1,5 +1,8 @@
 import {List, Map} from 'immutable';
 
+// setup the intialState
+export const INITIAL_STATE = Map();
+
 // setup the entries in the state tree
 export function setEntries(state, entries) {
   return state.set('entries', List(entries));
