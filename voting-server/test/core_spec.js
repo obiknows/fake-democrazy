@@ -22,7 +22,7 @@ describe('application logic', () => {
       const entries = List.of('Trainspotting', '28 Days Later');
       const nextState = setEntries(state, entries);
       expect(nextState).to.equal(Map({
-        entries : List.of('Trainspotting', '28 Days Later');
+        entries : List.of('Trainspotting', '28 Days Later')
        }));
     });
   });
@@ -106,7 +106,7 @@ describe('next', () => {
   });
 
   // handle a vote where theres a winner
-  it('puts winnder of current vote back to entries', () = {
+  it('puts winnder of current vote back to entries', () => {
     const state = Map({
       vote: Map({
         pair: List.of('Trainspotting', '28 Days Later'),
@@ -127,7 +127,7 @@ describe('next', () => {
   });
 
   // handle a vote where theres a winner
-  it('puts both from tied vote back to entries', () = {
+  it('puts both from tied vote back to entries', () => {
     const state = Map({
       vote: Map({
         pair: List.of('Trainspotting', '28 Days Later'),

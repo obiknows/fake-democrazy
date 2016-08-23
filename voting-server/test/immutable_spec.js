@@ -63,5 +63,8 @@ describe('immutability', () => {
         movies: List.of(
           'Trainspotting',
           '28 Days Later'
+        )
+      }));
+    });
   });
 });
