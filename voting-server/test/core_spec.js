@@ -133,7 +133,7 @@ describe('next', () => {
       }),
       entries: List.of('127 Hours', 'Trainspotting')
     }));
-  })
+  });
 
   // handle a vote where theres a winner
   it('puts both from tied vote back to entries', () = {
@@ -154,5 +154,5 @@ describe('next', () => {
       }),
       entries: List.of('127 Hours', 'Trainspotting', '28 Days Later')
     }));
-  })
+  });
 });
