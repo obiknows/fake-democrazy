@@ -1,5 +1,5 @@
 import jsdom from 'jsdom';
-import chat from 'chai';
+import chai from 'chai';
 import chatImmutable from 'chai-immutable';
 
 const doc =  jsdom.jsdom('<!doctype html><html><body></body></html>')
