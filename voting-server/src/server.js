@@ -1,7 +1,7 @@
 import Server from 'socket.io';
 
 // create the Redux store
-export default function startServer(store) {
+export function startServer(store) {
   const io = new Server().attach(8090);
 
   // send the whole state tree to every connected person
